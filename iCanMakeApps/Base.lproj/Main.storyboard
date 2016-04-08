@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1713" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="NotoSans-Bold.ttf">
+            <string>NotoSans-Bold</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iCanMakeApps" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +21,60 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="inH-Dj-ak5">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In / Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bwl-uw-iaF">
+                                        <rect key="frame" x="20" y="31" width="214" height="21"/>
+                                        <fontDescription key="fontDescription" name="NotoSans-Bold" family="Noto Sans" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.36183276271088716" blue="0.29272327176044188" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="102" id="Un0-Ir-V2G"/>
+                                    <constraint firstAttribute="height" constant="130" id="bgo-aE-2D7"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Un0-Ir-V2G"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G2e-1a-Vai" customClass="CustomView" customModule="iCanMakeApps" customModuleProvider="target">
+                                <rect key="frame" x="20" y="74" width="560" height="153"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="153" id="icm-dA-CAL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="inH-Dj-ak5" secondAttribute="trailing" id="9ml-ZD-hFW"/>
+                            <constraint firstItem="inH-Dj-ak5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IRH-3a-Jc9"/>
+                            <constraint firstItem="inH-Dj-ak5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ulp-Ne-m4q"/>
+                            <constraint firstItem="inH-Dj-ak5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aM6-J1-P1A"/>
+                            <constraint firstAttribute="trailing" secondItem="inH-Dj-ak5" secondAttribute="trailing" id="gtL-Mg-a8V"/>
+                            <constraint firstItem="inH-Dj-ak5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="h5R-k0-mcE"/>
+                            <constraint firstItem="G2e-1a-Vai" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="hD2-Dy-Ba5"/>
+                            <constraint firstItem="G2e-1a-Vai" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="lCn-yv-QTk"/>
+                            <constraint firstAttribute="trailing" secondItem="G2e-1a-Vai" secondAttribute="trailing" constant="20" id="wQp-Ux-qFK"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9ml-ZD-hFW"/>
+                                <exclude reference="IRH-3a-Jc9"/>
+                                <exclude reference="h5R-k0-mcE"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="305" y="357"/>
         </scene>
     </scenes>
 </document>
