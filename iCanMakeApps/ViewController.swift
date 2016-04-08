@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        data = ["Amy", "Bob", "Chris"]
         // Do any additional setup after loading the view, typically from a nib.
     }
 
